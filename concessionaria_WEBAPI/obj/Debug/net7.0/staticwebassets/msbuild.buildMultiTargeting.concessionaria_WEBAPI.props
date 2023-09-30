@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\concessionaria_WEBAPI.props" />
+</Project>
