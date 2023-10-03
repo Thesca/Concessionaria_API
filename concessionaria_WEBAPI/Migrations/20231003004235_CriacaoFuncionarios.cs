@@ -5,23 +5,26 @@
 namespace concessionaria_WEBAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class CriacaoInicial : Migration
+    public partial class CriacaoFuncionarios : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Teste",
+                name: "Funcionarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Nome = table.Column<string>(type: "TEXT", nullable: false),
-                    Idade = table.Column<int>(type: "INTEGER", nullable: false)
+                    Cpf = table.Column<string>(type: "TEXT", nullable: true),
+                    Nome = table.Column<string>(type: "TEXT", nullable: true),
+                    Cargo = table.Column<string>(type: "TEXT", nullable: true),
+                    Salario = table.Column<double>(type: "REAL", nullable: false),
+                    AnoContratatado = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Teste", x => x.Id);
+                    table.PrimaryKey("PK_Funcionarios", x => x.Id);
                 });
         }
 
@@ -29,7 +32,7 @@ namespace concessionaria_WEBAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Teste");
+                name: "Funcionarios");
         }
     }
 }
