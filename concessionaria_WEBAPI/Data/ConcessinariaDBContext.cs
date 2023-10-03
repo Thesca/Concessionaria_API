@@ -10,7 +10,7 @@ namespace concessionaria_WEBAPI.Data
         {
         }
         public DbSet<FuncionarioModel> Funcionarios { get; set; }  //representa a tabela de funcionarios no banco de dados
-        //public DbSet<Veiculo> Veiculos { get; set;}     
+        //public DbSet<VeiculoModel> Veiculos { get; set; }     
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("DataSource=estacionamento.db;Cache=Shared");

@@ -4,9 +4,17 @@ namespace concessionaria_WEBAPI.Models;
 
 public class FuncionarioModel
 {
+    private int _idFuncionario;
+    private string? _cpf;
+    
     [Key]
-    public int IdFuncionario { get; set; } 
-    public string? Cpf { get; set; }
+    public int IdFuncionario {
+        get => _idFuncionario;
+        set => _idFuncionario = value;} 
+    public string? Cpf { 
+        get => _cpf; 
+        set => _cpf = value; 
+    }
     public string? Nome { get; set; }
     public string? Cargo { get; set; }
     public double Salario { get; set; }
