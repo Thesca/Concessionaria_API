@@ -7,6 +7,7 @@ namespace concessionaria_WEBAPI.Data{
         public ConcessionariaDBContext(DbContextOptions<ConcessionariaDBContext> options) : base(options){}
         public DbSet<Teste>? Teste {get; set;}    
         public DbSet<OficinaModel>? Oficina {get;set;}
+        public DbSet<MensalistaModel>? Mensalista {get;set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("DataSource=estacionamento.db;Cache=Shared");

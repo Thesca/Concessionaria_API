@@ -1,8 +1,10 @@
-//TODO
-/*namespace concessionaria_WEBAPI.Models;
+using System.ComponentModel.DataAnnotations;
 
+namespace concessionaria_WEBAPI.Models;
     public class MensalistaModel{
-        //FR CPF Cliente
+        [Key]
+        public int CpfMensalista {get;set;}
+        public string? Status {get;set;}
+        public string? DiaDaLocacao {get;set;}
         //FR ID Pedido
     }
-*/

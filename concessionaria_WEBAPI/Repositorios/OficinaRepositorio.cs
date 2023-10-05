@@ -41,8 +41,7 @@ namespace concessionaria_WEBAPI.Repositorios{
             if(carroPorId == null) throw new Exception($"Carro com a placa {idCarroOficina} não foi encontrado no banco de dados.");
             _dbContext.Oficina.Remove(carroPorId);
             await _dbContext.SaveChangesAsync();
-            return true;
-            
+            return true;   
         }
     }
 }

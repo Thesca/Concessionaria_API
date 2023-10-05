@@ -1,7 +1,5 @@
 using concessionaria_WEBAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using concessionaria_WEBAPI.Data;
 using concessionaria_WEBAPI.Repositorios.Interfaces;
 namespace concessionaria_WEBAPI.Controllers;
 
