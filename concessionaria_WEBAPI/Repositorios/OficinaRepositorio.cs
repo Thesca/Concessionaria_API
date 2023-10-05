@@ -3,7 +3,8 @@ using concessionaria_WEBAPI.Models;
 using concessionaria_WEBAPI.Repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace concessionaria_WEBAPI.Repositorios{
+namespace concessionaria_WEBAPI.Repositorios
+{
     public class OficinaRepositorio : IOficinaRepositorio{
         private readonly ConcessionariaDBContext _dbContext;
         public OficinaRepositorio(ConcessionariaDBContext concessionariaDBContext){

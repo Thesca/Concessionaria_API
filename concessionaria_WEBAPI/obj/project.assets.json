@@ -5999,19 +5999,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thiago\\.nuget\\packages\\": {}
+    "C:\\Users\\vinic\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
+      "projectUniqueName": "e:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
       "projectName": "concessionaria_WEBAPI",
-      "projectPath": "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
-      "packagesPath": "C:\\Users\\thiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\obj\\",
+      "projectPath": "e:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
+      "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
+      "outputPath": "e:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\thiago\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

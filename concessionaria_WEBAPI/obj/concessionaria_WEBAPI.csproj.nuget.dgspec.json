@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {}
+    "E:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {
+    "E:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
+        "projectUniqueName": "E:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
         "projectName": "concessionaria_WEBAPI",
-        "projectPath": "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
-        "packagesPath": "C:\\Users\\thiago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thiago\\OneDrive\\Desktop\\WEB_API\\concessionaria_WEBAPI\\obj\\",
+        "projectPath": "E:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
+        "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
+        "outputPath": "E:\\Dev Visual\\TrabalhoConcessionaria\\concessionaria_WEBAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thiago\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

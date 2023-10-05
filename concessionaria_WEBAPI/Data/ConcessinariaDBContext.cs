@@ -4,9 +4,12 @@ using concessionaria_WEBAPI.Data.Map;
 
 namespace concessionaria_WEBAPI.Data{
     public class ConcessionariaDBContext:DbContext{
-        public ConcessionariaDBContext(DbContextOptions<ConcessionariaDBContext> options) : base(options){}
-        public DbSet<Teste>? Teste {get; set;}    
-        public DbSet<OficinaModel>? Oficina {get;set;}
+        public ConcessionariaDBContext(DbContextOptions<ConcessionariaDBContext> options) : base(options){} 
+        public DbSet<OficinaModel> Oficina {get;set;}
+        public DbSet<ClienteModel> Cliente {get;set;}
+        public DbSet<PedidoModel> Pedido {get;set;}
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("DataSource=estacionamento.db;Cache=Shared");

@@ -13,6 +13,7 @@ AddDbContext<ConcessionariaDBContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
 );*/
 builder.Services.AddScoped<IOficinaRepositorio, OficinaRepositorio>();
+builder.Services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
