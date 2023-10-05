@@ -22,10 +22,7 @@ namespace concessionaria_WEBAPI.Repositorios
         }
 
         public async Task<ClienteModel> AtualizarCliente(ClienteModel cliente, int id){
-            ClienteModel clientePorId = await _DbContext.Cliente.FirstOrDefaultAsync(x => x.Id == id);
-
-            if(clientePorId == null) throw new Exception($"Clinete de ID: {id} nao encotrado.");
-            
+            ClienteModel clientePorId = await _DbContext.Cliente.FirstOrDefaultAsync(x => x.Id == id) ?? throw new Exception($"Clinete de ID: {id} nao encotrado.");
             clientePorId.Nome = cliente.Nome;
             clientePorId.Email = cliente.Email;
             clientePorId.Telefone = cliente.Telefone;
@@ -37,10 +34,7 @@ namespace concessionaria_WEBAPI.Repositorios
         }
 
         public async Task<bool> DesativarCliente(int id){
-            ClienteModel clientePorId = await _DbContext.Cliente.FirstOrDefaultAsync(x => x.Id == id);
-
-            if(clientePorId == null) throw new Exception($"Clinete de ID: {id} nao encotrado.");
-
+            ClienteModel clientePorId = await _DbContext.Cliente.FirstOrDefaultAsync(x => x.Id == id) ?? throw new Exception($"Clinete de ID: {id} nao encotrado.");
             clientePorId.Ativo = false;
 
             _DbContext.Cliente.Update(clientePorId);
@@ -57,8 +51,7 @@ namespace concessionaria_WEBAPI.Repositorios
         }
 
         public async Task<ClienteModel> BuscarClientePorId(int id){
-            ClienteModel clientePorId = await _DbContext.Cliente.FirstOrDefaultAsync(x => x.Id == id);
-            if(clientePorId == null) throw new Exception($"Clinete de ID: {id} nao encotrado.");
+            ClienteModel clientePorId = await _DbContext.Cliente.FirstOrDefaultAsync(x => x.Id == id) ?? throw new Exception($"Clinete de ID: {id} nao encotrado.");
             return clientePorId;
         }     
     }

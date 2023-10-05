@@ -30,7 +30,7 @@ public class ClienteController : ControllerBase
         return Ok(clientes);
     }
 
-    [HttpGet("/Cliente/ListarDesativados")]
+    [HttpGet("/Cliente/Listar/Desativados")]
     public async  Task<ActionResult<List<ClienteModel>>> BuscarClientesDesativados(){
         List<ClienteModel> clientes = await _clienteRepositorio.BuscarClientesDesativados();
         return Ok(clientes);
@@ -53,7 +53,8 @@ public class ClienteController : ControllerBase
     
     public async Task<ActionResult<bool>> DesativarCliente(int id)
     {
-        await _clienteRepositorio.DesativarCliente(id);
+        bool desativado = await _clienteRepositorio.DesativarCliente(id);
+        if(!desativado) throw new Exception($"Erro ao desativar Cliente de ID: {id}");
         return Ok($"Cliente Desativado de ID: {id}.");
         
     }

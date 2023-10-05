@@ -9,8 +9,5 @@ namespace concessionaria_WEBAPI.Enum
 
         [Description("Pedido em Andamento.")]
         Andamento = 2,
-
-        [Description("Pedido Finalizado.")]
-        Finalizado = 3,
     }   
 }

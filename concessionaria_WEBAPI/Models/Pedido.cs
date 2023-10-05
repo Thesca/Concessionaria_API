@@ -6,12 +6,10 @@ namespace concessionaria_WEBAPI.Models;
 public class PedidoModel {
     [Key]
     public int Id {get; set;}
-    
-    [Timestamp]
-    public byte[]? DataHoraPedido { get; set; }
-
     public StatusPedido Status {get; set;}
-
-    public double ValorCompra {get;set;}
+    public double Valor {get;set;}
+    public string? Descricao {get;set;}
+    public int? ClienteId {get;set;}
+    public virtual ClienteModel? Cliente {get;set;}
 
 }
