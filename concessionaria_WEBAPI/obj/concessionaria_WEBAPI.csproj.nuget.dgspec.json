@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {}
+    "C:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {
+    "C:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
         "projectName": "concessionaria_WEBAPI",
-        "projectPath": "c:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
+        "projectPath": "C:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\concessionaria_WEBAPI.csproj",
         "packagesPath": "C:\\Users\\Alberth\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\obj\\",
+        "outputPath": "C:\\Users\\Alberth\\Desktop\\Web_Concessionaria\\Concessionaria_API\\concessionaria_WEBAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alberth\\AppData\\Roaming\\NuGet\\NuGet.Config"

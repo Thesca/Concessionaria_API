@@ -9,7 +9,7 @@ namespace concessionaria_WEBAPI.Data.Map
         public void Configure(EntityTypeBuilder<FuncionarioModel> builder)
         {
             builder.HasKey(x => x.IdFuncionario);
-            builder.Property(x => x.Cpf).IsRequired().HasMaxLength(11);
+            builder.Property(x => x.Cpf).IsRequired().HasMaxLength(20);
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(255);
             builder.Property(x => x.Cargo).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Salario).HasMaxLength(25);

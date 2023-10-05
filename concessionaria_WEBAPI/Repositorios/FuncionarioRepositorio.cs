@@ -11,7 +11,7 @@ namespace concessionaria_WEBAPI.Repositorios
         private readonly ConcessionariaDBContext _dbContext;
         public FuncionarioRepositorio(ConcessionariaDBContext dBContext)
         {
-            _dbContext = dBContext;         //agora consigo pegar um contexto e buscar os funcionários
+            _dbContext = dBContext;         //pegar um contexto e buscar os funcionários
         }
         public async Task<FuncionarioModel> BuscarPorId(int id)
         {
@@ -28,7 +28,7 @@ namespace concessionaria_WEBAPI.Repositorios
             return await _dbContext.Funcionarios.ToListAsync();
         }
 
-        public async Task<FuncionarioModel> Adicionar(FuncionarioModel funcionario)
+        public async Task<FuncionarioModel> AdicionarFuncionario(FuncionarioModel funcionario)
         {
            await _dbContext.Funcionarios.AddAsync(funcionario);
            await _dbContext.SaveChangesAsync();
@@ -36,7 +36,7 @@ namespace concessionaria_WEBAPI.Repositorios
            return funcionario;
         }
 
-        public async Task<FuncionarioModel> Atualizar(FuncionarioModel funcionario, int id)
+        public async Task<FuncionarioModel> AtualizarFuncionario(FuncionarioModel funcionario, int id)
         {
             FuncionarioModel funcionarioPorID = await BuscarPorId(id);
 
@@ -57,7 +57,7 @@ namespace concessionaria_WEBAPI.Repositorios
             return funcionarioPorID;
         }
 
-        public async Task<bool> Apagar(int id)
+        public async Task<bool> DeletarFuncionario(int id)
         {
             FuncionarioModel funcionarioPorID = await BuscarPorId(id);
 

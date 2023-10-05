@@ -20,12 +20,12 @@ public class FuncionarioController : ControllerBase
         _dbContext = funcionarioRepositorio;
     }
 
-    [HttpGet]
-    [Route("ListarFuncionarios")]
-    public async Task<ActionResult<List<FuncionarioModel>>> BuscarTodosFuncionarios()
+    [HttpPost]
+    [Route("AdicionarFuncionario")]
+    public async Task<ActionResult<FuncionarioModel>> AdicionarFuncionario([FromBody] FuncionarioModel funcionarioModel)
     {
-        List<FuncionarioModel> funcionarios = await _dbContext.BuscarTodosFuncionarios();
-        return Ok(funcionarios);
+        FuncionarioModel funcionario = await _dbContext.AdicionarFuncionario(funcionarioModel);
+        return Ok(funcionario);
     }
 
     [HttpGet]
@@ -36,28 +36,28 @@ public class FuncionarioController : ControllerBase
         return Ok(funcionario);
     }
 
-    [HttpPost]
-    [Route("CadastrarFuncionario")]
-    public async Task<ActionResult<FuncionarioModel>> Cadastrar([FromBody] FuncionarioModel funcionarioModel)
+    [HttpGet]
+    [Route("ListarFuncionarios")]
+    public async Task<ActionResult<List<FuncionarioModel>>> BuscarTodosFuncionarios()
     {
-        FuncionarioModel funcionario = await _dbContext.Adicionar(funcionarioModel);
-        return Ok(funcionario);
+        List<FuncionarioModel> funcionarios = await _dbContext.BuscarTodosFuncionarios();
+        return Ok(funcionarios);
     }
 
     [HttpPut]
     [Route("AlterarFuncionario")]
-    public async Task<ActionResult<FuncionarioModel>> Atualizar([FromBody] FuncionarioModel funcionarioModel, int IdFuncionario)
+    public async Task<ActionResult<FuncionarioModel>> AtualizarFuncionario([FromBody] FuncionarioModel funcionarioModel, int IdFuncionario)
     {
         funcionarioModel.IdFuncionario = IdFuncionario;
-        FuncionarioModel funcionario = await _dbContext.Atualizar(funcionarioModel, IdFuncionario);
+        FuncionarioModel funcionario = await _dbContext.AtualizarFuncionario(funcionarioModel, IdFuncionario);
         return Ok(funcionario);
     }
 
     [HttpDelete]
     [Route("DeletarFuncionario")]
-    public async Task<ActionResult<FuncionarioModel>> Deletar(int IdFuncionario)
+    public async Task<ActionResult<FuncionarioModel>> DeletarFuncionario(int IdFuncionario)
     {
-        bool deletado = await _dbContext.Apagar(IdFuncionario);
+        bool deletado = await _dbContext.DeletarFuncionario(IdFuncionario);
         return Ok(deletado);
     }
 }

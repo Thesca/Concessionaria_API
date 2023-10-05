@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using concessionaria_WEBAPI.Data;
 
@@ -10,9 +11,11 @@ using concessionaria_WEBAPI.Data;
 namespace concessionaria_WEBAPI.Migrations
 {
     [DbContext(typeof(ConcessionariaDBContext))]
-    partial class ConcessionariaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231005022428_AlteradoVeiculo")]
+    partial class AlteradoVeiculo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
@@ -74,9 +77,9 @@ namespace concessionaria_WEBAPI.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Status")
+                    b.Property<string>("Status")
                         .HasMaxLength(30)
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("TipoVeiculo")
                         .IsRequired()

@@ -20,6 +20,7 @@ namespace concessionaria_WEBAPI
             // );
 
             builder.Services.AddScoped<IFuncionarioRepositorio, FuncionarioRepositorio>();
+            builder.Services.AddScoped<IVeiculoRepositorio, VeiculoRepositorio>();
             //Toda vez que chamar a interface, ele vai instanciar a classe.
 
             var app = builder.Build();
