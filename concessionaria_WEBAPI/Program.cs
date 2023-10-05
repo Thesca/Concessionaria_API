@@ -15,6 +15,7 @@ AddDbContext<ConcessionariaDBContext>(
 builder.Services.AddScoped<IOficinaRepositorio, OficinaRepositorio>();
 builder.Services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
 builder.Services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
+builder.Services.AddScoped<IMensalistaRepositorio, MensalistaRepositorio>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

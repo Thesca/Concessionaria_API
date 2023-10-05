@@ -8,8 +8,7 @@ namespace concessionaria_WEBAPI.Data{
         public DbSet<OficinaModel> Oficina {get;set;}
         public DbSet<ClienteModel> Cliente {get;set;}
         public DbSet<PedidoModel> Pedido {get;set;}
-
-
+        public DbSet<MensalistaModel>? Mensalista {get;set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("DataSource=estacionamento.db;Cache=Shared");

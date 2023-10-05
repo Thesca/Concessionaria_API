@@ -1,7 +1,5 @@
 using concessionaria_WEBAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using concessionaria_WEBAPI.Data;
 using concessionaria_WEBAPI.Repositorios.Interfaces;
 namespace concessionaria_WEBAPI.Controllers;
 
@@ -20,17 +18,31 @@ public class OficinaController : ControllerBase {
         List<OficinaModel> carros = await _oficinaRepositorio.ListarOficina();
         return Ok(carros);
     }   
-    //TODO Buscar Por Placa
+    [HttpGet]
+    [Route("BuscarCarroPorID")]
+    public async Task<ActionResult<OficinaModel>> BuscarPorIdNaOficina(int idCarroOficina){
+        OficinaModel carro = await _oficinaRepositorio.BuscarPorId(idCarroOficina);
+        return Ok(carro);
+    }
 
     [HttpPost]
     [Route("CadastrarUmCarro")]
-    public async Task<ActionResult<OficinaModel>>CadatrarCarroNaOficina([FromBody]OficinaModel OficinaModel){
-        OficinaModel carro = await _oficinaRepositorio.AdicionarUmCarro(OficinaModel);
+    public async Task<ActionResult<OficinaModel>>CadatrarCarroNaOficina([FromBody]OficinaModel oficinaModel){
+        OficinaModel carro = await _oficinaRepositorio.AdicionarUmCarro(oficinaModel);
         return Ok(carro);
     }
-    /*
-    Task<OficinaModel> AdicionarUmCarro(OficinaModel carro);
-    Task<OficinaModel> Atualizar(OficinaModel carro, string placa);
-    Task<bool> RemoverCarroDaOficina(string placa); */
+    [HttpPut]
+    [Route("AtualizarCarroNaOficina")]
+    public async Task<ActionResult<OficinaModel>>AtualizarCarroNaOficina([FromBody]OficinaModel oficinaModel, int idCarroOficina){
+        oficinaModel.IdCarroOficina = idCarroOficina;
+        OficinaModel carro = await _oficinaRepositorio.Atualizar(oficinaModel, idCarroOficina);
+        return Ok(carro);
+    }
+    [HttpDelete]
+    [Route("RemoverCarroDaOficina")]
+    public async Task<ActionResult<OficinaModel>> RemoverCarroDaOficina(int idCarroOficina){
+        bool removido = await _oficinaRepositorio.RemoverCarroDaOficina(idCarroOficina);
+        return Ok(removido);
+    }
     
 }
