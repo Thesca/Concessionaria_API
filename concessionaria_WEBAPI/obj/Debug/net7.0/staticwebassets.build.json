@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "o6abhKg8EZWTiS8LXHqKSdbIjuQVe6JyToJaxwJgQ44=",
-  "Source": "concessionaria_WEBAPI",
-  "BasePath": "_content/concessionaria_WEBAPI",
+  "Hash": "RjjLD36lb538BFcGS6nhDddpiqjmpLh+XsVFyip79Fc=",
+  "Source": "Concessionaria.cs",
+  "BasePath": "_content/Concessionaria.cs",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
